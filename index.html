@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="container">
+                <div class="cinema__header">
+                    <img src="images/logo.png" alt="" class="cinema__logo">
+                </div>
+
+                <div class="search">
+                    <div class="search__container">
+                        <div class="search__string">
+                            <div class="search__group">
+                                <div>
+                                    <img src="images/search.png" alt="">
+                                </div>
+                                <div class="search__input">
+                                    <input type="text" placeholder="Поиск фильмов по жанрам и актерам">
+                                </div>
+                                <div class="search__cross">
+                                    <img src="images/cross.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="history">
+                        <div class="history__item">
+                            Как я встретил мамку
+                        </div>
+                        <div class="history__item">
+                            Гоп-стоп
+                        </div>
+                        <div class="history__item">
+                            Весенний дрозд
+                        </div>
+                        <div class="history__item history__item-long">
+                            Белоснежка и семь гномов
+                        </div>
+                        <div class="history__item history__item-long">
+                            Трое в лодке
+                        </div>
+                        <div class="history__item history__item-long">
+                            Бандитский петербург
+                        </div>
+                        <div class="history__item history__item-long">
+                            Спящая женщина и принц
+                        </div>
+                        <div class="history__item history__item-long">
+                            Война миров
+                        </div>
+                        <div class="history__item history__item-long">
+                            Дикий дикий дикий запад
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="container">
+                    <div class="results__text">
+                        <h3>Нашли 82 фильма</h3>
+                    </div>
+                    <div class="grid-container">
+                        <div class="results__cover">
+                            <div class="results__item results__item-loaded">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/forest.png)"></div>
+                                    <div class="info">
+                                        <div class="name">Форрест Гамп</div>
+                                        <div class="meta">
+                                            <div class="genre">Драма</div>
+                                            <div class="date">1997</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loaded">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/save_rayan.png);">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Спасти рядового Райана</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loaded">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/apollon.png);"></div>
+                                    <div class="info">
+                                        <div class="name">Aполлон 13</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loaded">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/inferno.png);"></div>
+                                    <div class="info">
+                                        <div class="name">Инферно</div>
+                                        <div class="meta">
+                                            <div class="genre">Триллер</div>
+                                            <div class="date">2014</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results__cover">
+                            <div class="results__item results__item-loading">
+                                <div class="item-content">
+                                    <div class="image" style="background-image: url(images/fault_load_1.png)">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Шпионский мост</div>
+                                        <div class="meta">
+                                            <div class="genre">Боевик, триллер</div>
+                                            <div class="date">2017</div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton">
+                                        <div class="line"></div>
+                                        <div class="line line_short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="not_found">
+                <div class="container">
+                    <div class="not_found__text">
+                        <p>Мы не поняли о чем речь ¯\_(ツ)_/¯</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__text">© 2019 Тинькофф Прокат</div>
+        </footer>
+
+        <div class="helper">
+            <input type="checkbox" name="history" data-class="search_active"> search_active<br>
+            <input type="checkbox" name="history" data-class="search_more_history"> search_more_history<br>
+            <input type="checkbox" name="status" data-class="search_live"> search_live<br>
+            <input type="checkbox" name="status" data-class="search_not_found"> search_not_found<br>
+            <input type="checkbox" name="scroll" data-class="scroll"> scroll<br>
+        </div>
+
+        <script>
+            const inputs = document.querySelectorAll('.helper input')
+            const main = document.querySelector('.content')
+            inputs.forEach(x => x.onchange = () => {
+                main.classList.toggle(x.dataset.class)
+            })
+        </script>
+    </div>
+</body>
+
+</html>
