@@ -72,7 +72,6 @@ input[type="text"] {
   display: flex;
   align-items: center;
   width: 80%;
-  /*width: 100%;*/
   flex: 0 1 auto;
 }
 
@@ -90,11 +89,6 @@ input[type="text"] {
   line-height: 36px;
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.4);
-}
-
-.search__cross:hover {
-  background: url("images/selected__cross.png") no-repeat;
-  cursor: pointer;
 }
 
 .history {
@@ -365,11 +359,13 @@ input[type="text"] {
   visibility: visible;
 }
 
-.search_live .results {
+.search_live .results,
+.search_live .search__cross {
   display: block;
 }
 
-.search_live .search__cross {
+.scroll .results,
+.scroll .search__cross {
   display: block;
 }
 
@@ -377,12 +373,9 @@ input[type="text"] {
   display: block;
 }
 
-.scroll .results {
-  display: block;
-}
-
-.scroll .search__cross {
-  display: block;
+.search__cross:hover {
+  background: url("images/selected__cross.png") no-repeat;
+  cursor: pointer;
 }
 
 .scroll .search__string {
