@@ -56,11 +56,11 @@ input[type="text"] {
 }
 
 .search__string {
-  width: 50%;
   margin: 0 auto;
   height: 74px;
+  width: 100%;
 
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #fdce25;
   border-radius: 2px;
   display: flex;
   align-items: center;
@@ -71,12 +71,13 @@ input[type="text"] {
   height: 48px;
   display: flex;
   align-items: center;
-  width: 80%;
   flex: 0 1 auto;
+  width: 100%;
 }
 
-.search__cross {
-  display: none;
+.search__cross:hover {
+  background: url("images/selected__cross.png") no-repeat;
+  cursor: pointer;
 }
 
 .text {
@@ -97,7 +98,6 @@ input[type="text"] {
   align-items: flex-start;
   max-width: 1280px;
   flex-wrap: wrap;
-  visibility: hidden;
 }
 
 .history__item {
@@ -114,10 +114,6 @@ input[type="text"] {
   border-radius: 8px;
 }
 
-.history__item-long {
-  visibility: collapse;
-}
-
 .history__item:hover {
   background: rgba(255, 255, 255, 1);
   border-radius: 4px;
@@ -129,23 +125,15 @@ input[type="text"] {
 
 .results {
   margin-top: 100px;
-  display: none;
 }
 
 .results__text {
   height: 48px;
   width: 309px;
   margin-bottom: 36px;
-}
 
-.not_found {
-  margin-top: 100px;
-
-  display: none;
-}
-
-.not_found__text {
   font-weight: 900;
+
   color: #ffffff;
   font-size: 36px;
   white-space: nowrap;
@@ -170,84 +158,17 @@ input[type="text"] {
   grid-gap: 24px;
 }
 
-.results__cover {
+movie-card {
   width: 302px;
   height: 454px;
 }
 
-.results__item {
-  box-sizing: border-box;
-}
-
-.skeleton {
-  position: absolute;
-  top: 330px;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  display: none;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.results__item-loading .skeleton {
-  display: flex;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
-  margin: 15px;
-}
-
-.results__item-loading .info {
+.results__loader-invisible {
   display: none;
 }
 
-.image {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.results__item-loaded .image {
+.results__loader-visible {
   display: block;
-}
-
-.results__item-loaded:hover .image {
-  opacity: 0.5;
-}
-
-.item-content {
-  position: relative;
-  display: flex;
-  height: 454px;
-  border-radius: 8px;
-  box-sizing: border-box;
-  background-color: gray;
-  overflow: hidden;
-}
-
-.results__item-loaded:hover .item-content {
-  cursor: pointer;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 26.43%,
-    rgba(0, 0, 0, 0.8) 72.41%
-  );
-  backdrop-filter: blur(1px);
-}
-
-.results__item-loaded:hover .info {
-  z-index: 1;
 }
 
 .name {
@@ -264,52 +185,6 @@ input[type="text"] {
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
-  color: #ffffff;
-}
-
-.meta {
-  display: flex;
-  justify-content: space-between;
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-
-  color: rgba(255, 255, 255, 0.24);
-}
-
-.line {
-  width: 246px;
-  height: 24px;
-  background-color: #aaa;
-}
-
-.line + .line {
-  margin-top: 8px;
-}
-
-.line_short {
-  width: 60%;
-}
-
-.scroll__input {
-  height: 74px;
-  width: 1440px;
-  border: 1px solid sandybrown;
-  background: rgba(28, 28, 28, 0.8);
-  backdrop-filter: blur(2px);
-  border-radius: 2px;
-  border-bottom: 1px solid #ffffff;
-  display: flex;
-  align-items: center;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.scroll__input p {
   color: #ffffff;
 }
 
@@ -330,64 +205,4 @@ input[type="text"] {
   line-height: 14px;
   color: rgba(255, 255, 255, 0.4);
   text-align: center;
-}
-
-.helper {
-  position: fixed;
-  top: 20vh;
-  right: 0;
-  background: #7777;
-  padding: 20px;
-}
-
-/*Селекторы переключения состояний*/
-
-.search_active .history {
-  visibility: visible;
-}
-
-.search_active .search__string {
-  width: 100%;
-  border-bottom-color: #fdce25;
-}
-
-.search_active .search__group {
-  width: 100%;
-}
-
-.search_more_history .history__item-long {
-  visibility: visible;
-}
-
-.search_live .results,
-.search_live .search__cross {
-  display: block;
-}
-
-.scroll .results,
-.scroll .search__cross {
-  display: block;
-}
-
-.search_not_found .not_found {
-  display: block;
-}
-
-.search__cross:hover {
-  background: url("images/selected__cross.png") no-repeat;
-  cursor: pointer;
-}
-
-.scroll .search__string {
-  z-index: 1;
-
-  background: rgba(28, 28, 28, 0.8);
-  backdrop-filter: blur(2px);
-  border-radius: 2px;
-  border-bottom: 1px solid #ffffff;
-  position: fixed;
-
-  top: 0;
-  left: 0;
-  right: 0;
 }
