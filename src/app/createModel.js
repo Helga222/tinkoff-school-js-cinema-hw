@@ -38,8 +38,9 @@ export const createModel = () =>
               };
         }
         try {
+          const endodedSerchTerm = encodeURIComponent(searchTerm);
           const data = await fetch(
-            `https://www.omdbapi.com/?type=movie&apikey=12d877ac&s=${searchTerm}`
+            `https://www.omdbapi.com/?type=movie&apikey=12d877ac&s=${endodedSerchTerm}`
           ).then((r) => r.json());
 
           const resultObject =

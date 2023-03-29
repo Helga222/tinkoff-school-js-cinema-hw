@@ -132,15 +132,8 @@ class MovieCard extends HTMLElement {
         break;
 
       case 'poster':
-        if (newValue === 'N/A') {
-          this.shadowRoot
-            .querySelector('.movie')
-            .classList.add('movie--no-image');
-        } else {
-          this.shadowRoot
-            .querySelector('.movie')
-            .classList.remove('movie--no-image');
-        }
+        const hasNoImage = newValue === 'N/A';
+        this.shadowRoot.querySelector('.movie').classList.toggle('movie--no-image', hasNoImage);
         this.shadowRoot.querySelector('.movie-image').src = newValue;
         break;
 

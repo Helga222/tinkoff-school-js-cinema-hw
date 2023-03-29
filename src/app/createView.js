@@ -104,16 +104,18 @@ export const createView = () => {
     return () => searchForm.removeEventListener("submit", listener);
   };
 
+  const tagHandler = (_listener, event) => {
+    if (event.target.classList.contains("history__item")) {
+      _listener(event.target.dataset.movie);
+    }
+  };
+
   const onTagClick = (_listener) => {
     const listener = (event) => {
       event.preventDefault();
 
       if (timer) clearTimeout(timer);
-      timer = setTimeout(function () {
-        if (event.target.classList.contains("history__item")) {
-          _listener(event.target.dataset.movie);
-        }
-      }, 250);
+      timer = setTimeout(tagHandler, 250,_listener,event);
     };
 
     searchTags.addEventListener("click", listener);
@@ -124,9 +126,7 @@ export const createView = () => {
     const listener = (event) => {
       event.preventDefault();
       clearTimeout(timer);
-      if (event.target.classList.contains("history__item")) {
-        _listener(event.target.dataset.movie);
-      }
+      tagHandler(_listener,event);
     };
 
     searchTags.addEventListener("dblclick", listener);
